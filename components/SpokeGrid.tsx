@@ -17,7 +17,7 @@ const spokes: Spoke[] = [
     id: 'ai',
     title: 'The AI Guide',
     subtitle: 'The Daemon',
-    description: 'A RAG system grounded in Protocol. Specialized user journeys for crisis stabilization and shadow work.',
+    description: 'An AI-powered functional guide. Unlike generic chatbots, this RAG system is grounded strictly in ClaimFreedom protocols. Features specialized user journeys for crisis stabilization.',
     url: 'https://daemon.tamethedmn.com',
     cta: 'Activate Daemon',
     icon: Bot,
@@ -27,7 +27,7 @@ const spokes: Spoke[] = [
     id: 'training',
     title: 'The Training',
     subtitle: 'Protocol Zero',
-    description: 'The community of Operators. Join "Protocol Zero: The Great Heist" on Skool to reclaim your hardware.',
+    description: 'The training ground. Home of "Protocol Zero: The Great Heist." A dedicated community of Operators reclaiming their hardware on Skool.',
     url: 'https://skool.com/tame-the-dmn',
     cta: 'Join Protocol',
     icon: Users,
@@ -37,7 +37,7 @@ const spokes: Spoke[] = [
     id: 'sim',
     title: 'The Simulation',
     subtitle: 'Critical Mass',
-    description: 'A massively multiplayer bio-rhythm game. Sync rhythms globally to flush out the "Wetiko" virus.',
+    description: 'A massively multiplayer bio-rhythm game. Sync rhythms globally to flush out the "Wetiko" virus and achieve coherence.',
     url: 'https://tamethedemon.com',
     cta: 'Enter Game',
     icon: Gamepad2,
@@ -61,11 +61,41 @@ const spokes: Spoke[] = [
     url: 'https://jeshuabenjoseph.substack.com',
     cta: 'Receive Signal',
     icon: Radio,
-    variant: 'purple' // Special variant for the signal
+    variant: 'purple'
   }
 ];
 
 export const SpokeGrid: React.FC = () => {
+  const getVariantStyles = (variant: Spoke['variant']) => {
+    switch (variant) {
+      case 'amber':
+        return {
+          accent: 'text-dmn-amber',
+          border: 'group-hover:border-dmn-amber/50',
+          shadow: 'group-hover:shadow-dmn-amber/20',
+          bg: 'group-hover:bg-dmn-amber/5',
+          corner: 'border-dmn-amber'
+        };
+      case 'purple':
+        return {
+          accent: 'text-purple-400',
+          border: 'group-hover:border-purple-400/50',
+          shadow: 'group-hover:shadow-purple-400/20',
+          bg: 'group-hover:bg-purple-400/5',
+          corner: 'border-purple-400'
+        };
+      case 'cyan':
+      default:
+        return {
+          accent: 'text-dmn-cyan',
+          border: 'group-hover:border-dmn-cyan/50',
+          shadow: 'group-hover:shadow-dmn-cyan/20',
+          bg: 'group-hover:bg-dmn-cyan/5',
+          corner: 'border-dmn-cyan'
+        };
+    }
+  };
+
   return (
     <section className="py-24 bg-dmn-dark relative overflow-hidden" id="ecosystem">
       <div className="container mx-auto px-4">
@@ -78,10 +108,7 @@ export const SpokeGrid: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {spokes.map((spoke) => {
-            const isAmber = spoke.variant === 'amber';
-            const accentColor = isAmber ? 'text-dmn-amber' : 'text-dmn-cyan';
-            const borderColor = isAmber ? 'group-hover:border-dmn-amber/50' : 'group-hover:border-dmn-cyan/50';
-            const shadowColor = isAmber ? 'group-hover:shadow-dmn-amber/20' : 'group-hover:shadow-dmn-cyan/20';
+            const styles = getVariantStyles(spoke.variant);
 
             return (
               <a 
@@ -89,11 +116,11 @@ export const SpokeGrid: React.FC = () => {
                 href={spoke.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group relative bg-slate-900/40 border border-white/5 p-8 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:bg-slate-900/80 hover:shadow-2xl ${borderColor} ${shadowColor}`}
+                className={`group relative bg-slate-900/40 border border-white/5 p-8 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:bg-slate-900/80 hover:shadow-2xl ${styles.border} ${styles.shadow}`}
               >
                 {/* Header */}
                 <div className="flex justify-between items-start mb-6">
-                  <div className={`p-3 rounded-lg bg-white/5 ${accentColor}`}>
+                  <div className={`p-3 rounded-lg bg-white/5 ${styles.accent} transition-colors duration-300 ${styles.bg}`}>
                     <spoke.icon size={32} strokeWidth={1.5} />
                   </div>
                   <ExternalLink className="text-slate-600 group-hover:text-white transition-colors" size={16} />
@@ -101,23 +128,23 @@ export const SpokeGrid: React.FC = () => {
 
                 {/* Content */}
                 <h3 className="text-2xl font-serif text-white mb-1 group-hover:text-white transition-colors">{spoke.title}</h3>
-                <p className={`font-mono text-xs uppercase tracking-wider mb-4 ${accentColor} opacity-80`}>{spoke.subtitle}</p>
-                <p className="text-slate-400 leading-relaxed text-sm mb-8 h-20 overflow-hidden text-ellipsis">
+                <p className={`font-mono text-xs uppercase tracking-wider mb-4 ${styles.accent} opacity-80`}>{spoke.subtitle}</p>
+                <p className="text-slate-400 leading-relaxed text-sm mb-8 min-h-[5rem] line-clamp-4">
                   {spoke.description}
                 </p>
 
                 {/* CTA Fake Button */}
-                <div className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest ${accentColor} border-b border-transparent group-hover:border-current transition-all`}>
+                <div className={`inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest ${styles.accent} border-b border-transparent group-hover:border-current transition-all`}>
                   {spoke.cta}
                   <div className="w-1 h-1 bg-current rounded-full animate-ping" />
                 </div>
                 
                 {/* Decorative Corners */}
-                <div className="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className={`w-2 h-2 border-t border-r ${isAmber ? 'border-dmn-amber' : 'border-dmn-cyan'}`}></div>
+                <div className="absolute top-0 right-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className={`w-2 h-2 border-t border-r ${styles.corner}`}></div>
                 </div>
-                <div className="absolute bottom-0 left-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className={`w-2 h-2 border-b border-l ${isAmber ? 'border-dmn-amber' : 'border-dmn-cyan'}`}></div>
+                <div className="absolute bottom-0 left-0 p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div className={`w-2 h-2 border-b border-l ${styles.corner}`}></div>
                 </div>
               </a>
             );
