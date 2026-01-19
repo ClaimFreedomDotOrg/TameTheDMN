@@ -26,7 +26,9 @@ export const Footer: React.FC = () => {
         
         <div className="text-center md:text-left">
           <h4 className="font-serif text-xl text-white tracking-wide">Tame the DMN</h4>
-          <p className="text-slate-500 text-xs font-mono mt-2">© {new Date().getFullYear()} Claim Freedom Protocol.</p>
+          <p className="text-slate-500 text-xs font-mono mt-2">
+            © 2026 <a href="https://claimfreedom.org" target="_blank" rel="noopener noreferrer" className="hover:text-dmn-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-dmn-cyan">Claim Freedom</a>.
+          </p>
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-6">

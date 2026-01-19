@@ -11,6 +11,14 @@ const App: React.FC = () => {
     setMounted(true);
   }, []);
 
+  const handleScrollToEcosystem = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const element = document.getElementById('ecosystem');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   if (!mounted) return null;
 
   return (
@@ -20,8 +28,14 @@ const App: React.FC = () => {
         <div className="font-serif font-bold text-white text-lg tracking-wider">
             Tame the DMN
         </div>
-        <div className="hidden md:flex gap-6 text-xs font-mono uppercase tracking-widest text-slate-400">
-            <a href="#ecosystem" className="hover:text-dmn-cyan transition-colors">Ecosystem</a>
+        <div className="flex gap-6 text-xs font-mono uppercase tracking-widest text-slate-400">
+            <a 
+              href="#ecosystem" 
+              onClick={handleScrollToEcosystem}
+              className="hover:text-dmn-cyan transition-colors cursor-pointer"
+            >
+              Ecosystem
+            </a>
         </div>
       </nav>
 
