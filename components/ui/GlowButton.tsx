@@ -25,6 +25,12 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
     ghost: "border-slate-700 text-slate-400 hover:border-slate-500 hover:text-white"
   };
 
+  const scanlineColors = {
+    cyan: "via-dmn-cyan/20",
+    amber: "via-dmn-amber/20",
+    ghost: "via-white/10"
+  };
+
   const Component = href ? 'a' : 'button';
   const props = href ? { 
     href, 
@@ -38,6 +44,11 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
       {...props} 
       className={`${baseStyles} ${variants[variant]} ${className}`}
     >
+      {/* Continuous Scanline Animation */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className={`absolute top-0 left-0 h-full w-2/3 bg-gradient-to-r from-transparent ${scanlineColors[variant]} to-transparent -skew-x-12 animate-scan`} />
+      </div>
+
       <span className="relative z-10 flex items-center justify-center gap-2">
         {children}
       </span>
