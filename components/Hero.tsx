@@ -15,8 +15,8 @@ export const Hero: React.FC = () => {
         {/* Brand Identity / Top Badge */}
         <div className="mb-8 animate-float">
             <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-dmn-cyan/30 bg-dmn-cyan/5 text-dmn-cyan text-xs font-mono tracking-[0.2em] uppercase backdrop-blur-md">
-                <span className="w-2 h-2 rounded-full bg-dmn-cyan animate-pulse"></span>
-                System Status: Critical
+                <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                System Status: <span className="text-red-500">Critical</span>
             </div>
         </div>
 
