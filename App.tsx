@@ -22,7 +22,6 @@ const App: React.FC = () => {
         </div>
         <div className="hidden md:flex gap-6 text-xs font-mono uppercase tracking-widest text-slate-400">
             <a href="#ecosystem" className="hover:text-dmn-cyan transition-colors">Ecosystem</a>
-            <a href="https://skool.com/tame-the-dmn" target="_blank" rel="noopener noreferrer" className="hover:text-dmn-cyan transition-colors">Login</a>
         </div>
       </nav>
 
