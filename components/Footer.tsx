@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
            </div>
 
            <div className="hidden md:block w-px h-5 bg-slate-800"></div>
-           <span className="text-slate-600 text-xs font-mono">OPERATOR STATUS: ONLINE</span>
+           <span className="text-slate-600 text-xs font-mono">OPERATOR STATUS: <span className="text-green-500">ONLINE</span></span>
         </div>
       </div>
     </footer>
