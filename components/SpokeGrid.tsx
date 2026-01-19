@@ -97,7 +97,7 @@ export const SpokeGrid: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-dmn-dark relative overflow-hidden scroll-mt-24" id="ecosystem">
+    <section className="py-24 bg-dmn-dark relative overflow-hidden scroll-mt-12" id="ecosystem">
       <div className="container mx-auto px-4">
         
         <div className="text-center mb-16">
