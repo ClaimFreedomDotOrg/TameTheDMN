@@ -22,7 +22,7 @@ export const ProblemSection: React.FC = () => {
                         <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
                     </div>
                   </div>
-                  <p className="font-mono text-xs text-dmn-amber/80 text-right">DMN ACTIVITY: 85% [CRITICAL]</p>
+                  <p className="font-mono text-xs text-dmn-amber/80 text-right">DMN ACTIVITY: 85% <span className="text-red-500">[CRITICAL]</span></p>
                   
                   <div className="h-2 bg-slate-800 rounded overflow-hidden">
                     <div className="h-full bg-dmn-cyan w-[15%]"></div>
