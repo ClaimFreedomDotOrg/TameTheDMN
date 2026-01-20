@@ -28,6 +28,8 @@ export const Footer: React.FC = () => {
           <h4 className="font-serif text-xl text-white tracking-wide">Tame the DMN</h4>
           <p className="text-slate-500 text-xs font-mono mt-2">
             © 2026 <a href="https://claimfreedom.org" target="_blank" rel="noopener noreferrer" className="hover:text-dmn-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-dmn-cyan">Claim Freedom</a>.
+            <span className="mx-2 text-slate-700">|</span>
+            <a href="https://claimfreedom.org/docs/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-dmn-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-dmn-cyan">Privacy Policy</a>
           </p>
         </div>
 
@@ -35,7 +37,7 @@ export const Footer: React.FC = () => {
            <div className="flex items-center gap-5">
               {/* Skool */}
               <SocialIcon 
-                href="https://www.skool.com/tame-the-dmn" 
+                href="https://skool.com/tame-the-dmn/about" 
                 icon={GraduationCap} 
                 label="Skool" 
               />

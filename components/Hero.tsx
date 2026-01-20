@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
 
         {/* CTAs */}
         <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto">
-          <GlowButton href="https://skool.com/tame-the-dmn" external variant="cyan">
+          <GlowButton href="https://skool.com/tame-the-dmn/about" external variant="cyan">
             <ShieldAlert size={18} />
             Start Protocol Zero
           </GlowButton>

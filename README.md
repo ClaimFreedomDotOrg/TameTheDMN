@@ -1,20 +1,16 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# TameTheDMN
 
-# Run and deploy your AI Studio app
+This is the marketing website for tamethedmn.com. It serves as a central hub for various related projects and resources.
 
-This contains everything you need to run your app locally.
+## Deployment
 
-View your app in AI Studio: https://ai.studio/apps/drive/1TO0ixQGUNqHV-LWBav6p-7DPmu7uGbWM
+This site is deployed to [Cloudflare Pages](https://pages.cloudflare.com/) and is available at [tamethedmn.com](https://tamethedmn.com).
 
-## Run Locally
+## Local Development
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+    `npm install`
+2. Run the app:
+    `npm run dev`

@@ -5,12 +5,6 @@ import { SpokeGrid } from './components/SpokeGrid';
 import { Footer } from './components/Footer';
 
 const App: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   const handleScrollToEcosystem = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const element = document.getElementById('ecosystem');
@@ -18,8 +12,6 @@ const App: React.FC = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
-  if (!mounted) return null;
 
   return (
     <main className="min-h-screen bg-dmn-dark text-slate-200 selection:bg-dmn-cyan selection:text-dmn-dark">

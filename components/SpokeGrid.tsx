@@ -28,7 +28,7 @@ const spokes: Spoke[] = [
     title: 'The Training',
     subtitle: 'Protocol Zero',
     description: 'The training ground. Home of "Protocol Zero: The Great Heist." A dedicated community of Operators reclaiming their hardware on Skool.',
-    url: 'https://skool.com/tame-the-dmn',
+    url: 'https://skool.com/tame-the-dmn/about',
     cta: 'Join Protocol',
     icon: Users,
     variant: 'cyan'

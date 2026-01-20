@@ -30,11 +30,10 @@ export const ProblemSection: React.FC = () => {
                   <p className="font-mono text-xs text-dmn-cyan/80 text-right">SALIENCE NETWORK: 15% [DORMANT]</p>
                </div>
                <div className="mt-8 font-mono text-sm text-slate-400">
-                  <p>> SCANNING CORTEX...</p>
-                  <p>> RUMINATION LOOP DETECTED.</p>
-                  <p>> DEFAULT MODE NETWORK HIJACKED.</p>
-                  <p className="text-dmn-amber animate-pulse">> INITIATING LOCKDOWN.</p>
-               </div>
+                                     <p>&gt; SCANNING CORTEX...</p>
+                                     <p>&gt; RUMINATION LOOP DETECTED.</p>
+                                     <p>&gt; DEFAULT MODE NETWORK HIJACKED.</p>
+                                     <p className="text-dmn-amber animate-pulse">&gt; INITIATING LOCKDOWN.</p>               </div>
             </div>
             
             {/* Background decorative elements */}
