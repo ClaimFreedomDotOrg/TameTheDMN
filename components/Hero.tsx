@@ -6,7 +6,7 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-dmn-dark z-0">
+      <div className="absolute inset-0 bg-midnight-indigo z-0">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-hero-glow rounded-full blur-3xl opacity-40 animate-pulse-slow pointer-events-none"></div>
       </div>
@@ -14,7 +14,7 @@ export const Hero: React.FC = () => {
       <div className="container mx-auto px-4 z-10 relative flex flex-col items-center text-center">
         {/* Brand Identity / Top Badge */}
         <div className="mb-8 animate-float">
-            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-dmn-cyan/30 bg-dmn-cyan/5 text-dmn-cyan text-xs font-mono tracking-[0.2em] uppercase backdrop-blur-md">
+            <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full border border-electric-cyan/30 bg-electric-cyan/5 text-electric-cyan text-xs font-mono tracking-[0.2em] uppercase backdrop-blur-md">
                 <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
                 System Status: <span className="text-red-500">Critical</span>
             </div>
@@ -23,13 +23,13 @@ export const Hero: React.FC = () => {
         {/* Main Headline */}
         <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6 tracking-tight leading-tight drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
           Welcome to the <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-dmn-cyan via-white to-dmn-cyan bg-300% animate-shine">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-cyan via-white to-electric-cyan bg-300% animate-shine">
             Operator's Seat
           </span>
         </h1>
 
         {/* Sub-headline */}
-        <h2 className="font-mono text-dmn-amber text-lg md:text-xl tracking-widest uppercase mb-8 max-w-2xl mx-auto border-y border-dmn-amber/20 py-4">
+        <h2 className="font-mono text-molten-gold text-lg md:text-xl tracking-widest uppercase mb-8 max-w-2xl mx-auto border-y border-molten-gold/20 py-4">
           The exit is not a place. It is a frequency.
         </h2>
 

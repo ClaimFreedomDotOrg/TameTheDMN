@@ -20,14 +20,14 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
   const baseStyles = "relative px-8 py-3 font-mono font-bold tracking-widest text-sm uppercase transition-all duration-300 border backdrop-blur-sm group overflow-hidden";
   
   const variants = {
-    cyan: "border-dmn-cyan text-dmn-cyan hover:bg-dmn-cyan/10 hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:text-white shadow-[0_0_10px_rgba(6,182,212,0.1)]",
-    amber: "border-dmn-amber text-dmn-amber hover:bg-dmn-amber/10 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:text-white shadow-[0_0_10px_rgba(245,158,11,0.1)]",
+    cyan: "border-electric-cyan text-electric-cyan hover:bg-electric-cyan/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:text-white shadow-[0_0_10px_rgba(0,229,255,0.1)]",
+    amber: "border-molten-gold text-molten-gold hover:bg-molten-gold/10 hover:shadow-[0_0_20px_rgba(255,159,28,0.4)] hover:text-white shadow-[0_0_10px_rgba(255,159,28,0.1)]",
     ghost: "border-slate-700 text-slate-400 hover:border-slate-500 hover:text-white"
   };
 
   const scanlineColors = {
-    cyan: "via-dmn-cyan/20",
-    amber: "via-dmn-amber/20",
+    cyan: "via-electric-cyan/20",
+    amber: "via-molten-gold/20",
     ghost: "via-white/10"
   };
 

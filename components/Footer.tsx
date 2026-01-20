@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
       href={href} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="text-slate-500 hover:text-dmn-cyan transition-colors transform hover:-translate-y-1 duration-200"
+      className="text-slate-500 hover:text-electric-cyan transition-colors transform hover:-translate-y-1 duration-200"
       aria-label={label}
     >
       {Icon ? (
@@ -27,9 +27,9 @@ export const Footer: React.FC = () => {
         <div className="text-center md:text-left">
           <h4 className="font-serif text-xl text-white tracking-wide">Tame the DMN</h4>
           <p className="text-slate-500 text-xs font-mono mt-2">
-            © 2026 <a href="https://claimfreedom.org" target="_blank" rel="noopener noreferrer" className="hover:text-dmn-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-dmn-cyan">Claim Freedom</a>.
+            © 2026 <a href="https://claimfreedom.org" target="_blank" rel="noopener noreferrer" className="hover:text-electric-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-electric-cyan">Claim Freedom</a>.
             <span className="mx-2 text-slate-700">|</span>
-            <a href="https://claimfreedom.org/docs/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-dmn-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-dmn-cyan">Privacy Policy</a>
+            <a href="https://claimfreedom.org/docs/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-electric-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-electric-cyan">Privacy Policy</a>
           </p>
         </div>
 

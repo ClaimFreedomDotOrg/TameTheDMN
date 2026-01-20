@@ -70,39 +70,39 @@ export const SpokeGrid: React.FC = () => {
     switch (variant) {
       case 'amber':
         return {
-          accent: 'text-dmn-amber',
-          border: 'group-hover:border-dmn-amber/50',
-          shadow: 'group-hover:shadow-dmn-amber/20',
-          bg: 'group-hover:bg-dmn-amber/5',
-          corner: 'border-dmn-amber'
+          accent: 'text-molten-gold',
+          border: 'group-hover:border-molten-gold/50',
+          shadow: 'group-hover:shadow-molten-gold/20',
+          bg: 'group-hover:bg-molten-gold/5',
+          corner: 'border-molten-gold'
         };
       case 'purple':
         return {
-          accent: 'text-purple-400',
-          border: 'group-hover:border-purple-400/50',
-          shadow: 'group-hover:shadow-purple-400/20',
-          bg: 'group-hover:bg-purple-400/5',
-          corner: 'border-purple-400'
+          accent: 'text-purple',
+          border: 'group-hover:border-purple/50',
+          shadow: 'group-hover:shadow-purple/20',
+          bg: 'group-hover:bg-purple/5',
+          corner: 'border-purple'
         };
       case 'cyan':
       default:
         return {
-          accent: 'text-dmn-cyan',
-          border: 'group-hover:border-dmn-cyan/50',
-          shadow: 'group-hover:shadow-dmn-cyan/20',
-          bg: 'group-hover:bg-dmn-cyan/5',
-          corner: 'border-dmn-cyan'
+          accent: 'text-electric-cyan',
+          border: 'group-hover:border-electric-cyan/50',
+          shadow: 'group-hover:shadow-electric-cyan/20',
+          bg: 'group-hover:bg-electric-cyan/5',
+          corner: 'border-electric-cyan'
         };
     }
   };
 
   return (
-    <section className="py-24 bg-dmn-dark relative overflow-hidden scroll-mt-12" id="ecosystem">
+    <section className="py-24 bg-midnight-indigo relative overflow-hidden scroll-mt-12" id="ecosystem">
       <div className="container mx-auto px-4">
         
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl text-white mb-4">The Ecosystem</h2>
-          <div className="h-1 w-24 bg-gradient-to-r from-transparent via-dmn-cyan to-transparent mx-auto"></div>
+          <div className="h-1 w-24 bg-gradient-to-r from-transparent via-electric-cyan to-transparent mx-auto"></div>
           <p className="mt-4 text-slate-400 font-mono uppercase tracking-widest text-sm">Select Your Interface</p>
         </div>
 
