@@ -1,17 +1,18 @@
 import React from 'react';
-import { BookOpen, Bot, Users, Gamepad2, Cpu, Radio, ExternalLink } from 'lucide-react';
+import { BookOpen, Bot, Users, Gamepad2, Cpu, Radio, ExternalLink, MessageCircle } from 'lucide-react';
 import { Spoke } from '../types';
 
 const spokes: Spoke[] = [
   {
-    id: 'wiki',
-    title: 'The Knowledge Base',
-    subtitle: 'claimfreedom.org',
-    description: 'The Source of Truth. A comprehensive Neuro-Gnostic wiki covering the neuroscience, philosophy, and theology.',
-    url: 'https://claimfreedom.org',
-    cta: 'Access Archives',
-    icon: BookOpen,
-    variant: 'cyan'
+    id: 'training',
+    title: 'The Training',
+    subtitle: 'Protocol Zero',
+    description: 'The training ground. Home of "Protocol Zero: The Great Heist." A dedicated community of Operators reclaiming their hardware on Skool.',
+    url: 'https://skool.com/tame-the-dmn/about',
+    cta: 'Join Protocol',
+    icon: Users,
+    variant: 'cyan',
+    thumbnail: '/spokes/skool-ss.png'
   },
   {
     id: 'ai',
@@ -21,17 +22,30 @@ const spokes: Spoke[] = [
     url: 'https://daemon.tamethedmn.com',
     cta: 'Activate Daemon',
     icon: Bot,
-    variant: 'amber'
+    variant: 'purple',
+    thumbnail: '/spokes/dmn-chat-ss.png'
   },
   {
-    id: 'training',
-    title: 'The Training',
-    subtitle: 'Protocol Zero',
-    description: 'The training ground. Home of "Protocol Zero: The Great Heist." A dedicated community of Operators reclaiming their hardware on Skool.',
-    url: 'https://skool.com/tame-the-dmn/about',
-    cta: 'Join Protocol',
-    icon: Users,
-    variant: 'cyan'
+    id: 'wiki',
+    title: 'The Knowledge Base',
+    subtitle: 'claimfreedom.org',
+    description: 'The Source of Truth. A comprehensive Neuro-Gnostic wiki covering the neuroscience, philosophy, and theology.',
+    url: 'https://claimfreedom.org',
+    cta: 'Access Archives',
+    icon: BookOpen,
+    variant: 'amber',
+    thumbnail: '/spokes/claim-freedom-ss.png'
+  },
+  {
+    id: 'discord',
+    title: 'The Community',
+    subtitle: 'Discord',
+    description: 'Connect with fellow Operators, share insights, and collaborate on the Tame the DMN mission.',
+    url: 'https://discord.tamethedmn.com',
+    cta: 'Join Community',
+    icon: MessageCircle,
+    variant: 'cyan',
+    thumbnail: 'https://placehold.co/600x400/0f172a/94a3b8?text=Discord+Community'
   },
   {
     id: 'sim',
@@ -41,7 +55,8 @@ const spokes: Spoke[] = [
     url: 'https://tamethedemon.com',
     cta: 'Enter Game',
     icon: Gamepad2,
-    variant: 'amber'
+    variant: 'purple',
+    thumbnail: '/spokes/critical-mass-ss.png'
   },
   {
     id: 'hardware',
@@ -51,7 +66,8 @@ const spokes: Spoke[] = [
     url: 'https://halotuner.com',
     cta: 'View Specs',
     icon: Cpu,
-    variant: 'cyan'
+    variant: 'amber',
+    thumbnail: 'https://placehold.co/600x400/0f172a/94a3b8?text=Hardware+Specs'
   },
   {
     id: 'voice',
@@ -61,7 +77,8 @@ const spokes: Spoke[] = [
     url: 'https://jeshuabenjoseph.substack.com',
     cta: 'Receive Signal',
     icon: Radio,
-    variant: 'purple'
+    variant: 'cyan',
+    thumbnail: '/spokes/substack-ss.png'
   }
 ];
 
@@ -125,6 +142,17 @@ export const SpokeGrid: React.FC = () => {
                   </div>
                   <ExternalLink className="text-slate-600 group-hover:text-white transition-colors" size={16} />
                 </div>
+
+                {/* Thumbnail */}
+                {spoke.thumbnail && (
+                  <div className="mb-6 overflow-hidden rounded-lg border border-white/5 group-hover:border-white/10 transition-colors">
+                    <img 
+                      src={spoke.thumbnail} 
+                      alt={spoke.title}
+                      className="w-full h-40 object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-105 group-hover:scale-100"
+                    />
+                  </div>
+                )}
 
                 {/* Content */}
                 <h3 className="text-2xl font-serif text-white mb-1 group-hover:text-white transition-colors">{spoke.title}</h3>

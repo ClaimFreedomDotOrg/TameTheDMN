@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Youtube, GraduationCap } from 'lucide-react';
+import { Github, Linkedin, Youtube, GraduationCap, MessageCircle } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const SocialIcon = ({ href, icon: Icon, path, label }: { href: string; icon?: any; path?: React.ReactNode; label: string }) => (
@@ -35,6 +35,13 @@ export const Footer: React.FC = () => {
 
         <div className="flex flex-col md:flex-row items-center gap-6">
            <div className="flex items-center gap-5">
+              {/* Discord */}
+              <SocialIcon 
+                href="https://discord.tamethedmn.com" 
+                icon={MessageCircle} 
+                label="Discord" 
+              />
+              
               {/* Skool */}
               <SocialIcon 
                 href="https://skool.com/tame-the-dmn/about" 

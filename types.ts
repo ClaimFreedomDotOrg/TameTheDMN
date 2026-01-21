@@ -9,6 +9,7 @@ export interface Spoke {
   cta: string;
   icon: LucideIcon;
   variant: 'cyan' | 'amber' | 'purple';
+  thumbnail?: string;
 }
 
 export interface NavItem {
