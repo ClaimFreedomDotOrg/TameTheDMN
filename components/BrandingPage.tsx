@@ -34,7 +34,7 @@ const BrandingPage: React.FC = () => {
                 </filter>
               </defs>
               <text 
-                x="50%" 
+                x="42%" 
                 y="50%" 
                 dominantBaseline="middle" 
                 textAnchor="end" 
@@ -45,7 +45,7 @@ const BrandingPage: React.FC = () => {
                 Tame
               </text>
               <text 
-                x="50%" 
+                x="42%" 
                 y="50%" 
                 dominantBaseline="middle" 
                 textAnchor="start" 
