@@ -8,13 +8,7 @@ const BrandingPage: React.FC = () => {
           <h1 className="text-5xl font-extrabold mb-2 tracking-wider">
             <svg width="100%" height="80" viewBox="0 0 600 80" className="mx-auto">
               <defs>
-                <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#00E5FF', stopOpacity: 1 }} />
-                  <stop offset="15%" style={{ stopColor: '#00E5FF', stopOpacity: 1 }} />
-                  <stop offset="50%" style={{ stopColor: '#FEEBC8', stopOpacity: 1 }} />
-                  <stop offset="100%" style={{ stopColor: '#FEEBC8', stopOpacity: 1 }} />
-                </linearGradient>
-                <filter id="glow">
+                <filter id="glowWarm">
                   <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur"/>
                   <feFlood floodColor="#e49256" floodOpacity="0.95" result="warmGlow"/>
                   <feComposite in="warmGlow" in2="blur" operator="in" result="glowEffect"/>
@@ -26,17 +20,41 @@ const BrandingPage: React.FC = () => {
                     <feMergeNode in="SourceGraphic"/>
                   </feMerge>
                 </filter>
+                <filter id="glowBlue">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur"/>
+                  <feFlood floodColor="#6e81a8" floodOpacity="0.95" result="blueGlow"/>
+                  <feComposite in="blueGlow" in2="blur" operator="in" result="blueEffect"/>
+                  <feFlood floodColor="#4a5875" floodOpacity="0.65" result="deepBlue"/>
+                  <feComposite in="deepBlue" in2="blur" operator="in" result="blueEffect2"/>
+                  <feMerge>
+                    <feMergeNode in="blueEffect"/>
+                    <feMergeNode in="blueEffect2"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
               </defs>
               <text 
                 x="50%" 
                 y="50%" 
                 dominantBaseline="middle" 
-                textAnchor="middle" 
-                fill="url(#titleGradient)"
-                filter="url(#glow)"
+                textAnchor="end" 
+                fill="#F2FCFB"
+                filter="url(#glowBlue)"
                 style={{ fontSize: '48px', fontWeight: 900, letterSpacing: '0.05em', fontFamily: "'PalatinoCustom','Palatino Linotype','Palatino','Times New Roman',serif" }}
               >
-                Tame the DMN
+                Tame
+              </text>
+              <text 
+                x="50%" 
+                y="50%" 
+                dominantBaseline="middle" 
+                textAnchor="start" 
+                dx="10"
+                fill="#FEEBC8"
+                filter="url(#glowWarm)"
+                style={{ fontSize: '48px', fontWeight: 900, letterSpacing: '0.05em', fontFamily: "'PalatinoCustom','Palatino Linotype','Palatino','Times New Roman',serif" }}
+              >
+                the DMN
               </text>
             </svg>
           </h1>
@@ -69,6 +87,11 @@ const BrandingPage: React.FC = () => {
             <Swatch color="bg-alert-red" name="Alert Red" hex="#EF4444" role="Errors / Critical Alerts" />
             <Swatch color="bg-plasma-pink" name="Plasma Pink" hex="#EC4899" role="Gradients / Creative Accents" />
             <Swatch color="bg-warm-cream" name="Warm Cream" hex="#FEEBC8" role="Soft Highlights / Warm Accents" />
+            <Swatch color="bg-logo-cool" name="Logo Cool Fill" hex="#C7DEEF" role='"Tame" word fill color' isLight />
+            <Swatch color="bg-tame-glow-light" name="Tame Glow Light" hex="#6E81A8" role='Outer glow for "Tame"' />
+            <Swatch color="bg-tame-glow-deep" name="Tame Glow Deep" hex="#4A5875" role='Inner glow for "Tame" depth' />
+            <Swatch color="bg-dmn-glow-warm" name="Warm Glow" hex="#E49256" role='Outer glow for "the DMN"' />
+            <Swatch color="bg-dmn-glow-deep" name="Deep Warm Glow" hex="#C96B2E" role='Inner glow for "the DMN" depth' />
             <Swatch color="bg-purple" name="Purple" hex="#c084fc" role="Shadow / Depth or Secondary Accent" />
             <Swatch color="bg-starlight-white" name="Starlight White" hex="#F0F8FF" role="Typography / Highlights" isLight />
           </div>
@@ -114,9 +137,12 @@ const BrandingPage: React.FC = () => {
   );
 };
 
-const Swatch = ({ color, name, hex, role, isLight = false }) => (
+const Swatch = ({ color = '', bgHex = undefined, name, hex, role, isLight = false }) => (
   <div className="bg-dark-panel rounded-lg overflow-hidden border border-faint-ring transition transform hover:-translate-y-1 shadow-lg shadow-black/30">
-    <div className={`h-36 w-full ${color} ${isLight ? 'border-b border-slate-300' : ''}`}></div>
+    <div
+      className={`h-36 w-full ${color || ''} ${isLight ? 'border-b border-slate-300' : ''}`}
+      style={bgHex ? { backgroundColor: bgHex } : undefined}
+    ></div>
     <div className="p-5">
       <span className={`font-bold text-lg mb-1 block ${isLight ? 'text-slate-800' : ''}`}>{name}</span>
       <span className="font-mono opacity-70 text-sm bg-black/30 px-2 py-1 rounded">{hex}</span>
@@ -147,6 +173,11 @@ const UsageTable = () => (
         <UsageRow color="bg-plasma-pink" element="Creative Accents" recommendation="Plasma Pink" context="Marketing headers, gradient fills, and vibrant brand moments." />
         <UsageRow color="bg-warm-cream" element="Soft Highlights" recommendation="Warm Cream" context="Gentle highlights, warm backgrounds, and soft emphasis areas." />
         <UsageRow color="bg-electric-cyan" element="Interactive States" recommendation="Electric Cyan" context="Hyperlinks, hover effects, active navigation tabs." />
+        <UsageRow color="bg-logo-cool" element="Logo Cool Fill" recommendation="Logo Cool" context='Primary wordmark fill for "Tame" text in the logo.' />
+        <UsageRow color="bg-tame-glow-light" element="Tame Glow (Light)" recommendation="Tame Glow Light" context='Outer glow tint for "Tame" in the logo lockup.' />
+        <UsageRow color="bg-tame-glow-deep" element="Tame Glow (Deep)" recommendation="Tame Glow Deep" context='Inner/depth glow for "Tame" in the logo lockup.' />
+        <UsageRow color="bg-dmn-glow-warm" element="DMN Glow (Warm)" recommendation="DMN Glow Warm" context='Outer warm glow for the "DMN" half of the logo.' />
+        <UsageRow color="bg-dmn-glow-deep" element="DMN Glow (Deep)" recommendation="DMN Glow Deep" context='Inner/depth warm glow for the "DMN" half of the logo.' />
         <UsageRow color="bg-starlight-white" element="Body Text" recommendation="Starlight White" context="General reading text for maximum contrast on Indigo." />
         <UsageRow color="bg-purple" element="Shadows" recommendation="Purple" context="Use for card shadows or secondary backgrounds to add richness." />
       </tbody>
@@ -154,11 +185,11 @@ const UsageTable = () => (
   </div>
 );
 
-const UsageRow = ({ color, element, recommendation, context }) => (
+const UsageRow = ({ color = '', element, recommendation, context }) => (
   <tr className="border-b border-faint-ring">
     <td className="p-4 font-bold">{element}</td>
     <td className="p-4 flex items-center">
-      <span className={`inline-block w-4 h-4 rounded-full mr-3 ${color}`}></span>
+      <span className={`inline-block w-4 h-4 rounded-full mr-3 ${color || ''}`}></span>
       {recommendation}
     </td>
     <td className="p-4 opacity-80">{context}</td>
