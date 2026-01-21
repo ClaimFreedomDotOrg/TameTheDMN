@@ -40,15 +40,22 @@ export const Hero: React.FC = () => {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto">
-          <GlowButton href="https://skool.com/tame-the-dmn/about" external variant="cyan">
-            <ShieldAlert size={18} />
-            Start Protocol Zero
-          </GlowButton>
-          
-          <GlowButton href="https://daemon.tamethedmn.com" external variant="amber">
-            <Bot size={18} />
-            Talk to the Daemon
+        <div className="flex flex-col gap-6 w-full md:w-auto">
+          <div className="flex flex-col md:flex-row gap-6 w-full md:w-auto">
+            <GlowButton href="https://skool.com/tame-the-dmn/about" external variant="cyan">
+              <ShieldAlert size={18} />
+              Start Protocol Zero
+            </GlowButton>
+            
+            <GlowButton href="https://daemon.tamethedmn.com" external variant="purple">
+              <Bot size={18} />
+              Talk to the Daemon
+            </GlowButton>
+          </div>
+
+          <GlowButton href="https://claimfreedom.org" external variant="amber" className="w-full">
+            <ArrowRight size={18} />
+            Explore the Neuro-Gnostic Inquiry
           </GlowButton>
         </div>
 

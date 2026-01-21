@@ -4,7 +4,7 @@ interface GlowButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
   href?: string;
-  variant?: 'cyan' | 'amber' | 'ghost';
+  variant?: 'cyan' | 'amber' | 'ghost' | 'purple';
   className?: string;
   external?: boolean;
 }
@@ -22,12 +22,14 @@ export const GlowButton: React.FC<GlowButtonProps> = ({
   const variants = {
     cyan: "border-electric-cyan text-electric-cyan hover:bg-electric-cyan/10 hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:text-white shadow-[0_0_10px_rgba(0,229,255,0.1)]",
     amber: "border-molten-gold text-molten-gold hover:bg-molten-gold/10 hover:shadow-[0_0_20px_rgba(255,159,28,0.4)] hover:text-white shadow-[0_0_10px_rgba(255,159,28,0.1)]",
+    purple: "border-purple text-purple hover:bg-purple/10 hover:shadow-[0_0_20px_rgba(192,132,252,0.4)] hover:text-white shadow-[0_0_10px_rgba(192,132,252,0.1)]",
     ghost: "border-slate-700 text-slate-400 hover:border-slate-500 hover:text-white"
   };
 
   const scanlineColors = {
     cyan: "via-electric-cyan/20",
     amber: "via-molten-gold/20",
+    purple: "via-purple/20",
     ghost: "via-white/10"
   };
 
