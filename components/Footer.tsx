@@ -25,7 +25,59 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
         
         <div className="text-center md:text-left">
-          <h4 className="font-serif text-xl text-white tracking-wide">Tame the DMN</h4>
+          <div className="mb-2">
+            <svg width="200" height="34" viewBox="0 0 300 50" className="mx-auto md:mx-0">
+              <defs>
+                <filter id="glowWarmFooter">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+                  <feFlood floodColor="#e49256" floodOpacity="0.95" result="warmGlow"/>
+                  <feComposite in="warmGlow" in2="blur" operator="in" result="glowEffect"/>
+                  <feFlood floodColor="#c96b2e" floodOpacity="0.75" result="deepGlow"/>
+                  <feComposite in="deepGlow" in2="blur" operator="in" result="glowEffect2"/>
+                  <feMerge>
+                    <feMergeNode in="glowEffect"/>
+                    <feMergeNode in="glowEffect2"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+                <filter id="glowBlueFooter">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+                  <feFlood floodColor="#6e81a8" floodOpacity="0.95" result="blueGlow"/>
+                  <feComposite in="blueGlow" in2="blur" operator="in" result="blueEffect"/>
+                  <feFlood floodColor="#4a5875" floodOpacity="0.65" result="deepBlue"/>
+                  <feComposite in="deepBlue" in2="blur" operator="in" result="blueEffect2"/>
+                  <feMerge>
+                    <feMergeNode in="blueEffect"/>
+                    <feMergeNode in="blueEffect2"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <text 
+                x="35%" 
+                y="50%" 
+                dominantBaseline="middle" 
+                textAnchor="end" 
+                fill="#F2FCFB"
+                filter="url(#glowBlueFooter)"
+                style={{ fontSize: '24px', fontWeight: 900, letterSpacing: '0.05em', fontFamily: "'PalatinoCustom','Palatino Linotype','Palatino','Times New Roman',serif" }}
+              >
+                Tame
+              </text>
+              <text 
+                x="35%" 
+                y="50%" 
+                dominantBaseline="middle" 
+                textAnchor="start" 
+                dx="5"
+                fill="#FEEBC8"
+                filter="url(#glowWarmFooter)"
+                style={{ fontSize: '24px', fontWeight: 900, letterSpacing: '0.05em', fontFamily: "'PalatinoCustom','Palatino Linotype','Palatino','Times New Roman',serif" }}
+              >
+                the DMN
+              </text>
+            </svg>
+          </div>
           <p className="text-subtext text-xs font-mono mt-2">
             © 2026 <a href="https://claimfreedom.org" target="_blank" rel="noopener noreferrer" className="hover:text-electric-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-electric-cyan">Claim Freedom</a>.
             <span className="mx-2 text-slate-700">|</span>
