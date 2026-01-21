@@ -3,7 +3,7 @@ import { BrainCircuit, Lock, Activity } from 'lucide-react';
 
 export const ProblemSection: React.FC = () => {
   return (
-    <section className="relative py-24 bg-midnight-indigo border-y border-white/5">
+    <section className="relative py-24 bg-midnight-indigo border-y border-faint-ring">
       <div className="absolute inset-0 bg-demon-glow opacity-20 pointer-events-none"></div>
       
       <div className="container mx-auto px-4 max-w-5xl">
@@ -11,7 +11,7 @@ export const ProblemSection: React.FC = () => {
           
           {/* Visual Side */}
           <div className="relative order-2 md:order-1">
-            <div className="relative z-10 bg-slate-900/50 backdrop-blur-sm border border-molten-gold/30 p-8 rounded-lg shadow-[0_0_30px_rgba(255,159,28,0.1)]">
+            <div className="relative z-10 bg-dark-panel backdrop-blur-sm border border-molten-gold/30 p-8 rounded-lg shadow-[0_0_30px_rgba(255,159,28,0.1)]">
                <div className="flex items-center gap-4 mb-6 border-b border-molten-gold/20 pb-4">
                   <Activity className="text-molten-gold animate-pulse" />
                   <h3 className="text-molten-gold font-mono text-xl tracking-wider">THREAT_DETECTED</h3>
@@ -29,7 +29,7 @@ export const ProblemSection: React.FC = () => {
                   </div>
                   <p className="font-mono text-xs text-electric-cyan/80 text-right">SALIENCE NETWORK: 15% [DORMANT]</p>
                </div>
-               <div className="mt-8 font-mono text-sm text-slate-400">
+               <div className="mt-8 font-mono text-sm text-metal-grey">
                                      <p>&gt; SCANNING CORTEX...</p>
                                      <p>&gt; RUMINATION LOOP DETECTED.</p>
                                      <p>&gt; DEFAULT MODE NETWORK HIJACKED.</p>
@@ -58,14 +58,14 @@ export const ProblemSection: React.FC = () => {
                   <Lock className="text-molten-gold shrink-0 mt-1" size={20} />
                   <div>
                     <h4 className="text-white font-bold font-mono">LOCKED OUT</h4>
-                    <p className="text-slate-400 text-sm">Access to the Divine Spark is blocked by noise.</p>
+                    <p className="text-subtext text-sm">Access to the Divine Spark is blocked by noise.</p>
                   </div>
                </div>
                <div className="flex items-start gap-3">
                   <BrainCircuit className="text-electric-cyan shrink-0 mt-1" size={20} />
                   <div>
                     <h4 className="text-white font-bold font-mono">RE-WIRE</h4>
-                    <p className="text-slate-400 text-sm">Activate the Salience Network. The Operator.</p>
+                    <p className="text-subtext text-sm">Activate the Salience Network. The Operator.</p>
                   </div>
                </div>
             </div>

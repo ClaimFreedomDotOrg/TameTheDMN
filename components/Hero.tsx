@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
         </h2>
 
         {/* Body Copy */}
-        <p className="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-light">
+        <p className="text-subtext text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed font-light">
           You are a biological machine interfaced with a Divine Spark. But the software is corrupted. 
           It is time to reclaim your <strong className="text-white font-semibold">Central Nervous System</strong>.
         </p>
@@ -61,8 +61,8 @@ export const Hero: React.FC = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce">
-          <span className="text-[10px] font-mono tracking-widest text-slate-500 uppercase">Initialize</span>
-          <ArrowRight className="rotate-90 text-slate-500" size={20} />
+          <span className="text-[10px] font-mono tracking-widest text-subtext uppercase">Initialize</span>
+          <ArrowRight className="rotate-90 text-subtext" size={20} />
         </div>
       </div>
     </section>

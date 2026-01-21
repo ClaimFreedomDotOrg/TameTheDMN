@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
       href={href} 
       target="_blank" 
       rel="noopener noreferrer" 
-      className="text-slate-500 hover:text-electric-cyan transition-colors transform hover:-translate-y-1 duration-200"
+      className="text-metal-grey hover:text-electric-cyan transition-colors transform hover:-translate-y-1 duration-200"
       aria-label={label}
     >
       {Icon ? (
@@ -21,12 +21,12 @@ export const Footer: React.FC = () => {
   );
 
   return (
-    <footer className="bg-slate-950 border-t border-white/5 py-12">
+    <footer className="bg-slate-950 border-t border-faint-ring py-12">
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
         
         <div className="text-center md:text-left">
           <h4 className="font-serif text-xl text-white tracking-wide">Tame the DMN</h4>
-          <p className="text-slate-500 text-xs font-mono mt-2">
+          <p className="text-subtext text-xs font-mono mt-2">
             © 2026 <a href="https://claimfreedom.org" target="_blank" rel="noopener noreferrer" className="hover:text-electric-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-electric-cyan">Claim Freedom</a>.
             <span className="mx-2 text-slate-700">|</span>
             <a href="https://claimfreedom.org/docs/privacy" target="_blank" rel="noopener noreferrer" className="hover:text-electric-cyan transition-colors underline decoration-slate-700 underline-offset-4 hover:decoration-electric-cyan">Privacy Policy</a>
@@ -85,8 +85,8 @@ export const Footer: React.FC = () => {
               />
            </div>
 
-           <div className="hidden md:block w-px h-5 bg-slate-800"></div>
-           <span className="text-slate-600 text-xs font-mono">OPERATOR STATUS: <span className="text-green-500">ONLINE</span></span>
+           <div className="hidden md:block w-px h-5 bg-metal-grey/50"></div>
+           <span className="text-slate-600 text-xs font-mono">OPERATOR STATUS: <span className="text-signal-green">ONLINE</span></span>
         </div>
       </div>
     </footer>

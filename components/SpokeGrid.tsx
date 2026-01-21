@@ -131,7 +131,7 @@ export const SpokeGrid: React.FC = () => {
 						The Ecosystem
 					</h2>
 					<div className="h-1 w-24 bg-gradient-to-r from-transparent via-electric-cyan to-transparent mx-auto"></div>
-					<p className="mt-4 text-slate-400 font-mono uppercase tracking-widest text-sm">
+					<p className="mt-4 text-subtext font-mono uppercase tracking-widest text-sm">
 						Select Your Interface
 					</p>
 				</div>
@@ -146,7 +146,7 @@ export const SpokeGrid: React.FC = () => {
 								href={spoke.url}
 								target="_blank"
 								rel="noopener noreferrer"
-								className={`group relative bg-slate-900/40 border border-white/5 p-8 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:bg-slate-900/80 hover:shadow-2xl ${styles.border} ${styles.shadow}`}
+									className={`group relative bg-dark-panel border border-faint-ring p-8 rounded-xl transition-all duration-300 hover:-translate-y-2 hover:bg-dark-panel/80 hover:shadow-2xl shadow-lg shadow-black/30 ${styles.border} ${styles.shadow}`}
 							>
 								{/* Header */}
 								<div className="flex justify-between items-start mb-6">
@@ -156,14 +156,14 @@ export const SpokeGrid: React.FC = () => {
 										<spoke.icon size={32} strokeWidth={1.5} />
 									</div>
 									<ExternalLink
-										className="text-slate-600 group-hover:text-white transition-colors"
+										className="text-metal-grey group-hover:text-white transition-colors"
 										size={16}
 									/>
 								</div>
 
 								{/* Thumbnail */}
 								{spoke.thumbnail && (
-									<div className="mb-6 overflow-hidden rounded-lg border border-white/5 group-hover:border-white/10 transition-colors">
+											<div className="mb-6 overflow-hidden rounded-lg border border-faint-ring group-hover:border-faint-ring/50 transition-colors">
 										<img
 											src={spoke.thumbnail}
 											alt={spoke.title}
@@ -181,7 +181,7 @@ export const SpokeGrid: React.FC = () => {
 								>
 									{spoke.subtitle}
 								</p>
-								<p className="text-slate-400 leading-relaxed text-sm mb-8 min-h-[5rem] line-clamp-4">
+										<p className="text-subtext leading-relaxed text-sm mb-8 min-h-[5rem] line-clamp-4">
 									{spoke.description}
 								</p>
 
