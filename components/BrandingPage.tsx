@@ -6,7 +6,39 @@ const BrandingPage: React.FC = () => {
       <div className="container mx-auto">
         <header className="text-center mb-16 pb-8 border-b border-faint-ring">
           <h1 className="text-5xl font-extrabold mb-2 tracking-wider">
-            <span className="text-electric-cyan" style={{ textShadow: '0 0 15px rgba(0, 229, 255, 0.6)' }}>Tame</span> the <span className="text-molten-gold" style={{ textShadow: '0 0 15px rgba(255, 159, 28, 0.6)' }}>DMN</span>
+            <svg width="100%" height="80" viewBox="0 0 600 80" className="mx-auto">
+              <defs>
+                <linearGradient id="titleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{ stopColor: '#00E5FF', stopOpacity: 1 }} />
+                  <stop offset="15%" style={{ stopColor: '#00E5FF', stopOpacity: 1 }} />
+                  <stop offset="50%" style={{ stopColor: '#FEEBC8', stopOpacity: 1 }} />
+                  <stop offset="100%" style={{ stopColor: '#FEEBC8', stopOpacity: 1 }} />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur"/>
+                  <feFlood floodColor="#e49256" floodOpacity="0.95" result="warmGlow"/>
+                  <feComposite in="warmGlow" in2="blur" operator="in" result="glowEffect"/>
+                  <feFlood floodColor="#c96b2e" floodOpacity="0.75" result="deepGlow"/>
+                  <feComposite in="deepGlow" in2="blur" operator="in" result="glowEffect2"/>
+                  <feMerge>
+                    <feMergeNode in="glowEffect"/>
+                    <feMergeNode in="glowEffect2"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <text 
+                x="50%" 
+                y="50%" 
+                dominantBaseline="middle" 
+                textAnchor="middle" 
+                fill="url(#titleGradient)"
+                filter="url(#glow)"
+                style={{ fontSize: '48px', fontWeight: 900, letterSpacing: '0.05em', fontFamily: "'PalatinoCustom','Palatino Linotype','Palatino','Times New Roman',serif" }}
+              >
+                Tame the DMN
+              </text>
+            </svg>
           </h1>
           <p className="text-lg opacity-80">Brand Color System & Usage Guidelines</p>
         </header>
@@ -36,6 +68,7 @@ const BrandingPage: React.FC = () => {
             <Swatch color="bg-signal-green" name="Signal Green" hex="#10B981" role="Success / In Tune Indicators" />
             <Swatch color="bg-alert-red" name="Alert Red" hex="#EF4444" role="Errors / Critical Alerts" />
             <Swatch color="bg-plasma-pink" name="Plasma Pink" hex="#EC4899" role="Gradients / Creative Accents" />
+            <Swatch color="bg-warm-cream" name="Warm Cream" hex="#FEEBC8" role="Soft Highlights / Warm Accents" />
             <Swatch color="bg-purple" name="Purple" hex="#c084fc" role="Shadow / Depth or Secondary Accent" />
             <Swatch color="bg-starlight-white" name="Starlight White" hex="#F0F8FF" role="Typography / Highlights" isLight />
           </div>
@@ -64,7 +97,7 @@ const BrandingPage: React.FC = () => {
         <section>
           <h2 className="text-3xl mb-6 border-l-4 border-electric-cyan pl-4">Component Preview</h2>
           <div className="bg-dark-panel p-8 rounded-lg border border-faint-ring shadow-lg shadow-black/30">
-            <h1 className="text-4xl mb-4">Ready to <span className="text-electric-cyan" style={{ textShadow: '0 0 15px rgba(0, 229, 255, 0.6)' }}>Tame</span> the <span className="text-molten-gold" style={{ textShadow: '0 0 15px rgba(255, 159, 28, 0.6)' }}>DMN</span>?</h1>
+            <h1 className="text-4xl mb-4">Ready to <span className="text-[#397399]" style={{ textShadow: '0 0 18px rgba(57, 115, 153, 0.95), 0 0 28px rgba(57, 115, 153, 0.5)' }}>Tame</span> the <span className="text-molten-gold" style={{ textShadow: '0 0 15px rgba(255, 159, 28, 0.6)' }}>DMN</span>?</h1>
             <p className="max-w-prose mb-6">This is how your typography and color hierarchy interacts. The high contrast ensures readability while maintaining the energetic, mystical aesthetic of the brand.</p>
             <div>
               <a href="#" className="inline-block bg-molten-gold text-black font-bold py-3 px-6 rounded-md mr-4 transition hover:opacity-90">Get Started</a>
@@ -112,6 +145,7 @@ const UsageTable = () => (
         <UsageRow color="bg-signal-green" element="Success States" recommendation="Signal Green" context="Confirmation messages, completion indicators, and 'in tune' status states." />
         <UsageRow color="bg-alert-red" element="Errors & Alerts" recommendation="Alert Red" context="Error messages, critical warnings, and urgent system alerts." />
         <UsageRow color="bg-plasma-pink" element="Creative Accents" recommendation="Plasma Pink" context="Marketing headers, gradient fills, and vibrant brand moments." />
+        <UsageRow color="bg-warm-cream" element="Soft Highlights" recommendation="Warm Cream" context="Gentle highlights, warm backgrounds, and soft emphasis areas." />
         <UsageRow color="bg-electric-cyan" element="Interactive States" recommendation="Electric Cyan" context="Hyperlinks, hover effects, active navigation tabs." />
         <UsageRow color="bg-starlight-white" element="Body Text" recommendation="Starlight White" context="General reading text for maximum contrast on Indigo." />
         <UsageRow color="bg-purple" element="Shadows" recommendation="Purple" context="Use for card shadows or secondary backgrounds to add richness." />
