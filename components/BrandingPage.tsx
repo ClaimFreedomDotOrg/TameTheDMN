@@ -87,7 +87,7 @@ const BrandingPage: React.FC = () => {
             <Swatch color="bg-alert-red" name="Alert Red" hex="#EF4444" role="Errors / Critical Alerts" />
             <Swatch color="bg-plasma-pink" name="Plasma Pink" hex="#EC4899" role="Gradients / Creative Accents" />
             <Swatch color="bg-warm-cream" name="Warm Cream" hex="#FEEBC8" role="Soft Highlights / Warm Accents" />
-            <Swatch color="bg-logo-cool" name="Logo Cool Fill" hex="#C7DEEF" role='"Tame" word fill color' isLight />
+            <Swatch color="bg-logo-cool" name="Logo Cool Fill" hex="#F2FCFB" role='"Tame" word fill color' isLight />
             <Swatch color="bg-tame-glow-light" name="Tame Glow Light" hex="#6E81A8" role='Outer glow for "Tame"' />
             <Swatch color="bg-tame-glow-deep" name="Tame Glow Deep" hex="#4A5875" role='Inner glow for "Tame" depth' />
             <Swatch color="bg-dmn-glow-warm" name="Warm Glow" hex="#E49256" role='Outer glow for "the DMN"' />
@@ -120,7 +120,7 @@ const BrandingPage: React.FC = () => {
         <section>
           <h2 className="text-3xl mb-6 border-l-4 border-electric-cyan pl-4">Component Preview</h2>
           <div className="bg-dark-panel p-8 rounded-lg border border-faint-ring shadow-lg shadow-black/30">
-            <h1 className="text-4xl mb-4">Ready to <span className="text-[#397399]" style={{ textShadow: '0 0 18px rgba(57, 115, 153, 0.95), 0 0 28px rgba(57, 115, 153, 0.5)' }}>Tame</span> the <span className="text-molten-gold" style={{ textShadow: '0 0 15px rgba(255, 159, 28, 0.6)' }}>DMN</span>?</h1>
+            <h1 className="text-4xl mb-4">Ready to <span className="text-[#F2FCFB]" style={{ textShadow: '0 0 18px rgba(110, 129, 168, 0.95), 0 0 28px rgba(74, 88, 117, 0.65)', fontFamily: "'PalatinoCustom','Palatino Linotype','Palatino','Times New Roman',serif", fontWeight: 900, letterSpacing: '0.05em' }}>Tame</span> the <span className="text-[#FEEBC8]" style={{ textShadow: '0 0 15px rgba(228, 146, 86, 0.95), 0 0 25px rgba(201, 107, 46, 0.75)', fontFamily: "'PalatinoCustom','Palatino Linotype','Palatino','Times New Roman',serif", fontWeight: 900, letterSpacing: '0.05em' }}>DMN</span>?</h1>
             <p className="max-w-prose mb-6">This is how your typography and color hierarchy interacts. The high contrast ensures readability while maintaining the energetic, mystical aesthetic of the brand.</p>
             <div>
               <a href="#" className="inline-block bg-molten-gold text-black font-bold py-3 px-6 rounded-md mr-4 transition hover:opacity-90">Get Started</a>
@@ -129,8 +129,8 @@ const BrandingPage: React.FC = () => {
           </div>
         </section>
 
-        <footer className="text-center opacity-50 mt-16 text-sm">
-          Generated for Tame the DMN Project
+        <footer className="text-center mt-16 text-sm">
+          <span className="opacity-50">Generated for </span><span className="text-[#F2FCFB]" style={{ textShadow: '0 0 18px rgba(110, 129, 168, 0.95), 0 0 28px rgba(74, 88, 117, 0.65)', fontFamily: "'PalatinoCustom','Palatino Linotype','Palatino','Times New Roman',serif", fontWeight: 900, letterSpacing: '0.05em' }}>Tame</span> <span className="text-[#FEEBC8]" style={{ textShadow: '0 0 15px rgba(228, 146, 86, 0.95), 0 0 25px rgba(201, 107, 46, 0.75)', fontFamily: "'PalatinoCustom','Palatino Linotype','Palatino','Times New Roman',serif", fontWeight: 900, letterSpacing: '0.05em' }}>the DMN</span><span className="opacity-50"> Project</span>
         </footer>
       </div>
     </div>
