@@ -3,7 +3,7 @@ import { BrainCircuit, Lock, Activity } from 'lucide-react';
 
 export const ProblemSection: React.FC = () => {
   return (
-    <section className="relative py-24 bg-midnight-indigo border-y border-faint-ring">
+    <section id="problem-section" className="relative py-24 bg-midnight-indigo border-y border-faint-ring">
       <div className="absolute inset-0 bg-demon-glow opacity-20 pointer-events-none"></div>
       
       <div className="container mx-auto px-4 max-w-5xl">
